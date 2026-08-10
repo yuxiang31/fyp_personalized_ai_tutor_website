@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Home - AI Tutor{% endblock %}
+{% block nav %}
+ <div class="nav-buttons">
+    <a href="users/login" class="btn btn-outline">Login</a>
+    <a href="users/register" class="btn btn-primary">Sign Up</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="about-page">
+    <!-- Description Section -->
+    <section class="description-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="text-content animate-up">
+                    <h1>Welcome to AI Tutor</h1>
+                    <p class="lead">
+                        Experience the future of personalized learning with our advanced AI-powered tutoring platform. 
+                        We combine cutting-edge artificial intelligence with proven educational methodologies to create 
+                        a unique learning experience tailored just for you.
+                    </p>
+                    <p>
+                        Our platform adapts to your learning style, pace, and preferences, ensuring that every lesson 
+                        is optimized for maximum understanding and retention. Whether you're a student looking to excel 
+                        in your studies or a professional seeking to acquire new skills, AI Tutor is here to guide you 
+                        every step of the way.
+                    </p>
+                    <p>
+                        Join thousands of learners who have already transformed their educational journey with AI Tutor. 
+                        Discover the power of intelligent learning and unlock your full potential today.
+                    </p>
+                </div>
+                <div class="image-content slide-right">
+                    <div class="hero-image">
+                        <div class="ai-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Functions Section -->
+    <section class="functions-section">
+        <div class="container">
+            <h2 class="section-title animate-up">Our Key Features</h2>
+            <div class="functions-grid">
+                <div class="function-card animate-up">
+                    <div class="function-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Personalized Learning</h3>
+                    <p>
+                        Our AI analyzes your learning patterns and adapts content to match your unique style. 
+                        Every lesson is customized to help you learn faster and retain information longer.
+                    </p>
+                </div>
+                <div class="function-card animate-up">
+                    <div class="function-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>
+                        Learn at your own pace, anytime, anywhere. Our AI tutor is available round the clock 
+                        to answer questions and provide guidance whenever you need it.
+                    </p>
+                </div>
+                <div class="function-card animate-up">
+                    <div class="function-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h3>Personalized Learning Materials</h3>
+                    <p>
+                        Our AI tutor offers personalized learning materials tailored to each student's unique needs, goals, and learning style.  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

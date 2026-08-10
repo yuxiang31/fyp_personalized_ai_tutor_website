@@ -1,0 +1,67 @@
+/* for form */
+/* Full-page wrapper to center the card */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #87CEEB, #98FB98);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+}
+
+.form-container h1 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.form-with-validation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Django form fields */
+.form-with-validation input,
+.form-with-validation select,
+.form-with-validation textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.form-submit {
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #1a242f;
+}
+
+/* for error in form */
+.errorlist {
+    color: #F00;
+    margin-left: 2rem;
+}

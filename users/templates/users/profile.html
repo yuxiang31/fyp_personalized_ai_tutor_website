@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Your Profile{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/profile.css' %}">{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+	<div class="profile-card">
+		<div class="profile-header">
+			<h1>Your Profile</h1>
+		</div>
+
+		{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+					<li class="message {{ message.tags }}">{{ message }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+		<form class="profile-form" method="post" action="{% url 'users:profile' %}">
+			{% csrf_token %}
+			<div class="form-grid">
+				<div class="form-field">
+					<label for="id_first_name">First name</label>
+					{{ form.first_name }}
+				</div>
+				<div class="form-field">
+					<label for="id_last_name">Last name</label>
+					{{ form.last_name }}
+				</div>
+				<div class="form-field">
+					<label for="id_learning_preference">Learning preference</label>
+					{{ form.learning_preference }}
+				</div>
+				<div class="form-field">
+					<label for="id_email">Email</label>
+					{{ form.email }}
+				</div>
+			</div>
+
+			<div class="profile-actions">
+				<button type="submit" class="save-btn">Save changes</button>
+				<a class="secondary-btn" href="{% url 'chat:index' %}">Back to Chat</a>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,181 @@
+/*
+This chat.css contains overall CSS style for chat app
+[1] Overall CSS Style
+[2] Header Style
+[3] Status Style
+[4] ScrollBar Style
+[5] Responsive Design Style
+[6] Resizable Sidebar
+*/
+
+/* ===================== [1] Overall CSS Style ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+/* ===================== [1] Overall CSS Style ===================== */
+
+/* ===================== [2] Header Style ===================== */
+.chat-header {
+    grid-area: header;
+    background: linear-gradient(90deg, #87CEEB, #98FB98);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+/* ===================== [2] Header Style ===================== */
+
+/* ===================== [3] Status Style ===================== */
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff4444;
+    transition: background-color 0.3s ease;
+}
+
+.status-indicator.connected {
+    background: #44ff44;
+}
+
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid #c62828;
+}
+/* ===================== [3] Status Style ===================== */
+
+/* ===================== [4] ScrollBar Style ===================== */
+.chat-messages::-webkit-scrollbar,
+.conversation-history::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track,
+.conversation-history::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb,
+.conversation-history::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover,
+.conversation-history::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+/* ===================== [4] ScrollBar Style ===================== */
+
+/* ===================== [5] Responsive Design Style ===================== */
+@media (max-width: 768px) {
+    .chat-container {
+        grid-template-columns: 250px 1fr;
+    /* Keep input bottom-anchored with upward growth on small screens */
+    grid-template-rows: 60px 1fr minmax(70px, 200px);
+    }
+
+    .chat-header {
+        padding: 15px;
+    }
+
+    .chat-header h1 {
+        font-size: 18px;
+    }
+
+    .chat-input-container {
+        padding: 15px;
+    }
+
+    .conversation-history {
+        padding: 15px 10px;
+    }
+
+    .sidebar-buttons {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .sidebar-btn {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .history-item {
+        padding: 8px;
+    }
+}
+/* ===================== [5] Responsive Design Style ===================== */
+
+/* ===================== [6] Resizable Sidebar Style ===================== */
+.sidebar { 
+    position: relative; 
+}
+    
+.sidebar-resizer { 
+    position: absolute; 
+    top: 0; 
+    right: -3px; 
+    width: 6px; 
+    height: 100%; 
+    cursor: col-resize; 
+    background: transparent; 
+    z-index: 2; 
+}
+    
+.sidebar-resizer::after { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 2px; 
+    right: 2px; 
+    background: rgba(0,0,0,0.08); 
+    border-radius: 3px; 
+    transition: background 0.15s ease, opacity 0.15s ease; }
+        
+.sidebar-resizer:hover::after, .sidebar-resizer:focus::after, .sidebar-resizer.dragging::after { 
+    background: rgba(0,0,0,0.2); 
+}
+/* Optional: small sender label styling (non-intrusive) */
+        
+.message-bubble .sender-name { 
+    font-size: 0.75rem; 
+    font-weight: 600; 
+    opacity: 0.8; 
+    margin-bottom: 4px; 
+}
+/* ===================== [6] Resizable Sidebar Style ===================== */

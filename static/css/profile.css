@@ -1,0 +1,96 @@
+/* Basic profile page styling */
+.page-wrapper { 
+    padding: 2rem 1rem; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.profile-card { 
+    width: 100%; 
+    max-width: 720px; 
+    background: #fff; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06); 
+    padding: 1.5rem; 
+}
+
+.profile-header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 1rem; 
+}
+
+.profile-header h1 { 
+    margin: 0; 
+    font-size: 1.5rem; 
+}
+
+.back-to-chat { 
+    text-decoration: none; 
+    color: #2563eb; 
+}
+
+.messages { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0 0 1rem 0; 
+}
+
+.message { 
+    padding: .75rem 1rem; 
+    border-radius: 8px; 
+    background: #ecfdf5; 
+    color: #065f46; 
+    border: 1px solid #a7f3d0; 
+}
+
+.message.error { 
+    background: #fef2f2; 
+    color: #991b1b; 
+    border-color: #fecaca; 
+}
+
+.form-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem;
+}
+
+.form-field { 
+    display: flex; 
+    flex-direction: column; 
+    gap: .5rem; 
+}
+
+.form-field input, .form-field select { 
+    padding: .6rem .75rem; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+}
+
+.profile-actions { 
+    display: flex; 
+    gap: .75rem; 
+    margin-top: 1rem; 
+}
+
+.save-btn { 
+    background: #2563eb; 
+    color: #fff; 
+    border: none; 
+    border-radius: 8px; 
+    padding: .6rem 1rem; 
+    cursor: pointer; 
+}
+
+.secondary-btn { 
+    background: transparent; 
+    color: #374151; 
+    border: 1px solid #d1d5db; 
+    border-radius: 8px; 
+    padding: .6rem 1rem; 
+    text-decoration: none; 
+}

@@ -1,0 +1,444 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #87CEEB, #98FB98);
+    padding: 18px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-outline {
+    color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.btn-outline:hover {
+    background-color: #2c3e50;
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.3);
+}
+
+.btn-primary {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #34495e;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+/* Main Content */
+main {
+    margin-top: 80px;
+}
+
+/* About Page Styles */
+.about-page {
+    min-height: calc(100vh - 80px);
+}
+
+/* Description Section */
+.description-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: 500px;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.text-content .lead {
+    font-size: 1.3rem;
+    color: #5a6c7d;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: linear-gradient(135deg, #87CEEB, #98FB98);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.ai-icon {
+    font-size: 8rem;
+    color: white;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Functions Section */
+.functions-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.functions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.function-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.function-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-color: #87CEEB;
+}
+
+.function-card:hover .function-icon {
+    transform: scale(1.1);
+    color: #2c3e50;
+}
+
+.function-card:hover h3 {
+    color: #87CEEB;
+}
+
+.function-icon {
+    font-size: 3rem;
+    color: #87CEEB;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+}
+
+.function-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.function-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #87CEEB;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #87CEEB;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    background-color: #98FB98;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(152, 251, 152, 0.4);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #4a5f7a;
+    opacity: 0.8;
+}
+
+/* Add active/pressed states for better responsiveness */
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.function-card:active {
+    transform: translateY(-8px) scale(1.01);
+}
+
+.social-links a:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Add hover effects for logo */
+.nav-brand h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-brand h2:hover {
+    color: #87CEEB;
+    transform: scale(1.05);
+}
+
+/* Add subtle hover effect for hero image */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: linear-gradient(135deg, #87CEEB, #98FB98);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Add hover effect for section titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    transition: color 0.2s ease;
+    cursor: default;
+}
+
+/* .section-title:hover {
+    color: #87CEEB;
+}
+.animate-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+} */
+
+.animate-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease;
+}
+
+.slide-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-buttons {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    
+    .btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .text-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .text-content .lead {
+        font-size: 1.1rem;
+    }
+    
+    .hero-image {
+        height: 300px;
+    }
+    
+    .ai-icon {
+        font-size: 6rem;
+    }
+    
+    .functions-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .function-card {
+        padding: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .description-section,
+    .functions-section {
+        padding: 2rem 0;
+    }
+    
+    .text-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .functions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .function-card {
+        padding: 1rem;
+    }
+}
+
